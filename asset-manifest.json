@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/KharchaPani-Tracker/static/css/main.4d67a5a5.css",
+    "main.js": "/KharchaPani-Tracker/static/js/main.4484ba2c.js",
+    "static/media/Bacakground1.jpg": "/KharchaPani-Tracker/static/media/Bacakground1.43e8cfe2f0aec18278c7.jpg",
+    "index.html": "/KharchaPani-Tracker/index.html",
+    "main.4d67a5a5.css.map": "/KharchaPani-Tracker/static/css/main.4d67a5a5.css.map",
+    "main.4484ba2c.js.map": "/KharchaPani-Tracker/static/js/main.4484ba2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d67a5a5.css",
+    "static/js/main.4484ba2c.js"
+  ]
+}
