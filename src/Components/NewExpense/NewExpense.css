@@ -1,0 +1,9 @@
+.new-expense{
+    /* background-color: rgb(129, 91, 212); */
+    background: url(../../image/Bacakground1.jpg);
+    width: 50rem;
+    max-width: 95%;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    padding: 25px 15px;
+}

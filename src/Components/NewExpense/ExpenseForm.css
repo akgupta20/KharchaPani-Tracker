@@ -1,0 +1,55 @@
+.expense-form{
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    color: rgb(196, 142, 25);
+    
+
+}
+.expense-form-input{
+    display: flex;
+    flex-direction: column;
+    width:45% ;
+    margin: 8px ;
+   
+    
+   
+    
+}
+.expense-form-label{
+    font-family:inherit;
+    font-weight: bold;
+    margin: 5px;
+}
+.expense-form-button{
+    text-align: right;
+    
+   
+    
+    
+}
+.btn{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: inherit;
+    padding: 12px;
+    background-color: rgb(51, 8, 8);
+    color: white;
+    border-radius: 12px;
+    border: 2px solid gold;
+    cursor: pointer;
+}
+input{
+    height:35px;
+    font-family: inherit;
+    font-size: 17px; 
+    font-weight: bold;   
+}
+.required{
+font-family: inherit;
+color:rgb(255, 0, 0);
+}
+
+input:focus{
+   background-color: rgb(235, 221, 248);
+}
