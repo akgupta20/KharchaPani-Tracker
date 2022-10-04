@@ -14,7 +14,7 @@ const App = () => {
   };
   return (
     <div>
-    <h2>From Akash Gupta</h2>
+  
           <NewExpense FromApp={SaveInApp} />
       <Expenses Expenses={AppExpenses} />
     </div>
