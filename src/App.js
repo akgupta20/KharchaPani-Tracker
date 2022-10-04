@@ -14,7 +14,11 @@ const App = () => {
   };
   return (
     <div>
+<<<<<<< HEAD
      
+=======
+  
+>>>>>>> 2e026d97fa4867e7a94c42e996fcb7aa4dbd80b1
           <NewExpense FromApp={SaveInApp} />
       <Expenses Expenses={AppExpenses} />
     </div>
