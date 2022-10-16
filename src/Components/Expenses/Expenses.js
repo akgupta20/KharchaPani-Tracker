@@ -1,23 +1,34 @@
 import "./Expenses.css";
-import React from 'react';
+import React,{useState} from 'react';
 import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
-import '../NewExpense/DeveloperDetails.css';
+import TotalExpense from "./TotalExpense";
 
-const Expenses=(props)=> {
-  return (
+const Expenses = (props) => {
+  
+  const SaveInExpenses = (deleteExpense) => {
+    props.FromAppToExpense(deleteExpense);
+  }
+ 
+   let expenseCardClasses = 'expenses ex-' +  props.ExpensesTheme ;
     
-      
-      <Card className="expenses">
+
+  
+  
+
+  return (
+    <Card className={expenseCardClasses}>
+      <TotalExpense title='Totel Expense' amount={props.totalExpense} />
       {
         props.Expenses.map(
-          expense=>(<ExpenseItem ExpenseItem={expense}/>)
+          expense => (<ExpenseItem ExpenseItem={expense}
+            FromExpenses={SaveInExpenses} ItemTheme={props.ExpensesTheme}
+          />)
         )
-        
-      } <a href="https://www.linkedin.com/in/akash-gupta-9a2461228"><h3 className="developerdetails">Develope by- Akash Gupta</h3></a>
-    </Card>
-    
-   
+
+      } </Card>
+
+
   );
 }
 export default Expenses;

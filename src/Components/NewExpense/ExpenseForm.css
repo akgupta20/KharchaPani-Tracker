@@ -33,17 +33,20 @@
     font-weight: bold;
     font-family: inherit;
     padding: 12px;
-    background-color: rgb(51, 8, 8);
+    background-color: rgb(4, 74, 26);
     color: white;
     border-radius: 12px;
-    border: 2px solid gold;
+    border: 2px solid orange;
     cursor: pointer;
 }
-input{
+.input-field{
     height:35px;
     font-family: inherit;
     font-size: 17px; 
     font-weight: bold;   
+    border-radius: 6px;
+    outline: none;
+    border: none;
 }
 .required{
 font-family: inherit;

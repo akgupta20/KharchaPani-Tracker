@@ -1,0 +1,13 @@
+.filter-expenses{
+    width: 50rem;
+    max-width: 95%;
+    margin: 2rem auto;
+    padding: 25px 15px;
+    background-color: rgba(133, 58, 204, 0.745);
+    
+}
+
+.filter-field{
+  width: 100%;
+  
+}

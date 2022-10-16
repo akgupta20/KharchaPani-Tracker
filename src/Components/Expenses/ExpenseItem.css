@@ -1,10 +1,18 @@
+.item-light-theme{
+    --bgcolvar: rgb(57, 45, 90);
+}
+.item-dark-theme{
+   --bgcolvar: rgba(37, 68, 210, 0.21);
+}
+
 .expense-item{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(57, 45, 90);
-    box-shadow: 8px 6px 7px rgb(19, 23, 105);
+    box-shadow: 2px 2px 2px rgb(19, 105, 30);
+    background-color: var(--bgcolvar);
     margin: 15px 5px;
+    border: 0.1px solid rgb(124, 3, 143);
 }
 
 .expense-item__discription{
@@ -14,7 +22,8 @@
     /* align-items: flex-end; */
     flex-flow: column-reverse;
     justify-content: flex-start;
-    margin: 0px 30px;
+    margin: 0px 20px;
+    font-size: 14px;
     flex: 1;
     color: rgb(239, 238, 245);
     
@@ -24,8 +33,18 @@
     padding: 0.5rem;
     border: 2px solid white;
     background-color: rgb(35, 35, 91);
-    font-size: 18px;
-    padding: 6px 18px;
+    font-size: 16px;
+    padding: 3px 18px;
     font-weight: bold;
     margin-right: 10px;
+}
+.deletebtn{
+    background-color: var(--bgcolvar);
+    color: red;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    margin: 5px;
+    padding: 0px;
+    cursor: pointer;
 }

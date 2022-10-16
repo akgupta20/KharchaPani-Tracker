@@ -31,9 +31,10 @@ const ExpenseForm = (props) => {
     );
     else {
       const obj = {
-        title: enteredTitle,
+        title: enteredTitle.toLocaleUpperCase(),
         amount: enteredAmount,
         date: new Date(enteredDate),
+        id:(new (Date)).getTime() 
       };
 
       props.FromNewExpense(obj);
@@ -54,7 +55,7 @@ const ExpenseForm = (props) => {
           <input
             type="text"
             value={enteredTitle}
-            onChange={titleChangeHandler}  
+            onChange={titleChangeHandler} className='input-field' 
           ></input>
           <RequiredField data={enteredTitle}></RequiredField>
         </div>
@@ -68,7 +69,7 @@ const ExpenseForm = (props) => {
             onChange={amountChangeHandler}
             min="0.1"
             step="0.1"
-            placeholder="Enter Amount "
+            placeholder="Enter Amount " className='input-field' 
           ></input>
           <RequiredField data={enteredAmount}></RequiredField>
         </div>
@@ -78,6 +79,7 @@ const ExpenseForm = (props) => {
           </label>
           <input
             type="date"
+            className='input-field' 
             value={enteredDate}
             onChange={dateChangeHandler}
           ></input>
@@ -92,4 +94,7 @@ const ExpenseForm = (props) => {
     </form>
   );
 };
+
+
+
 export default ExpenseForm;
