@@ -2,9 +2,8 @@ import Card from "../UI/Card";
 import React from "react";
 import "./ExpenseDate.css";
 const ExpenseDate = (props) => {
-  const month = props.ExpenseDate.toLocaleString("en-india", {
-    month: "short",
-  });
+  const month = props.ExpenseDate.toLocaleString("en-india", { month: "short",
+});
   const year = props.ExpenseDate.getFullYear();
   const day = props.ExpenseDate.toLocaleString("en-india", {
     day: "2-digit",

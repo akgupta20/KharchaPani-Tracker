@@ -1,7 +1,13 @@
 import { useState } from 'react';
-import RequiredField from '../NewExpense/RequiredField';
 import Card from '../UI/Card';
 import './FilterExpenses.css';
+
+const isStringContainOnlySpaces = ourstr => {
+    for (let i = 0; i < ourstr.length; i++)
+      if (ourstr[i] !==' ')
+        return 0;
+     return 1;// 1means containing
+  }
 
 const FilterExpenses = (props) => {
     const [EnterText, setEnterText] = useState('');
@@ -16,12 +22,11 @@ const FilterExpenses = (props) => {
 
        
         e.preventDefault();
-        if (EnterText === '' || EnterText === ' ');
-        else {
+        if ( ! isStringContainOnlySpaces(EnterText))
             props.FromApp(EnterText);
            
 
-        }
+        
     }
  
 

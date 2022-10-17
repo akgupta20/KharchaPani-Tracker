@@ -2,13 +2,26 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 import RequiredField from "./RequiredField";
 
+const isStringContainOnlySpaces = ourstr => {
+  for (let i = 0; i < ourstr.length; i++)
+    if (ourstr[i] !== ' ')
+      return 0;
+   return 1;// 1means containing
+}
+
 const ExpenseForm = (props) => {
-  const [enteredTitle, setenteredTitle] = useState(" ");
-  const [enteredAmount, setenteredAmount] = useState(" ");
-  const [enteredDate, setenteredDate] = useState(" ");
+  const [enteredTitle, setenteredTitle] = useState('');
+  const [enteredAmount, setenteredAmount] = useState('');
+  let today_date = `${new Date().getFullYear()}-${new Date().toLocaleString("en-india", { month: "2-digit", })}-${new Date().getDate()}`;
+  const [enteredDate, setenteredDate] = useState(today_date);
+  const [RequiredEnteredAmount, setRequiredEnteredAmount] = useState('not-blank');
+  const [RequiredEnteredTitle, setRequiredEnteredTitle] = useState('not-blank');
+
+
 
   const titleChangeHandler = (e) => {
     setenteredTitle(e.target.value);
+
   };
   const amountChangeHandler = (e) => {
     setenteredAmount(e.target.value);
@@ -18,30 +31,26 @@ const ExpenseForm = (props) => {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    if (enteredTitle === " ") setenteredTitle("");
-    if (enteredAmount === " ") setenteredAmount("");
-    if (enteredDate === " ") setenteredDate("");
-    if (
-      enteredTitle === " " ||
-      enteredAmount === " " ||
-      enteredDate === " " ||
-      enteredTitle === "" ||
-      enteredAmount === "" ||
-      enteredDate === ""
-    );
-    else {
+    
+    if (enteredAmount ==='')
+      setRequiredEnteredAmount('blank');
+    else setRequiredEnteredAmount('not-blank');
+    if (isStringContainOnlySpaces(enteredTitle))
+      setRequiredEnteredTitle('blank');
+    else setRequiredEnteredTitle('not-blank');
+
+    if (enteredAmount !== '' || ! isStringContainOnlySpaces(enteredTitle))
+ {
       const obj = {
         title: enteredTitle.toLocaleUpperCase(),
         amount: enteredAmount,
         date: new Date(enteredDate),
-        id:(new (Date)).getTime() 
+        id: new Date().getTime()
       };
-
       props.FromNewExpense(obj);
-
-      setenteredAmount(" ");
-      setenteredDate(" ");
-      setenteredTitle(" ");
+      setenteredAmount('');
+      setenteredDate(today_date);
+      setenteredTitle("");
     }
   };
 
@@ -55,9 +64,10 @@ const ExpenseForm = (props) => {
           <input
             type="text"
             value={enteredTitle}
-            onChange={titleChangeHandler} className='input-field' 
+            onChange={titleChangeHandler} className='input-field'
+            placeholder="Enter expense name"
           ></input>
-          <RequiredField data={enteredTitle}></RequiredField>
+          <RequiredField data={RequiredEnteredTitle}></RequiredField>
         </div>
         <div className="expense-form-input">
           <label className="expense-form-label">
@@ -69,9 +79,9 @@ const ExpenseForm = (props) => {
             onChange={amountChangeHandler}
             min="0.1"
             step="0.1"
-            placeholder="Enter Amount " className='input-field' 
+            placeholder="Enter Amount " className='input-field'
           ></input>
-          <RequiredField data={enteredAmount}></RequiredField>
+          <RequiredField data={RequiredEnteredAmount}></RequiredField>
         </div>
         <div className="expense-form-input">
           <label className="expense-form-label">
@@ -79,11 +89,11 @@ const ExpenseForm = (props) => {
           </label>
           <input
             type="date"
-            className='input-field' 
+            className='input-field'
             value={enteredDate}
             onChange={dateChangeHandler}
           ></input>
-          <RequiredField data={enteredDate}></RequiredField>
+          
         </div>
       </div>
       <div className="expense-form-button">
