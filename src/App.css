@@ -1,23 +1,26 @@
 .light-theme{
-    --bgVar: rgb(142, 216, 211);
+  --bgVar: rgb(142, 216, 211) ;
+  background-color: rgba(41, 33, 190, 0.652) ;
+  
 }
 .dark-theme{
-    --bgVar: #282c34;
+  --bgVar: #282c34;
 }
 
 body{
-    background-color: var(--bgVar);
+  z-index: 20 !important;
+  background-color: var(--bgVar) ;
 }
 .backAndTheme{
-    display: flex;
-    width: 50rem;
-    max-width: 95%;
-    margin: 1rem auto;
-    padding: 0px 15px;
+  display: flex;
+  width: 50rem;
+  max-width: 95%;
+  margin: 1rem auto;
+  padding: 0px 15px;
 }
 .back-btn-icon{
-    color: rgb(19, 0, 0);
-    font-size: 25px;
-    font-weight: bold;
-    
+  color: rgb(19, 0, 0);
+  font-size: 25px;
+  font-weight: bold;
+  
 }

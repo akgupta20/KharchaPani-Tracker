@@ -56,6 +56,11 @@ const ExpenseForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
+      <div className="expense-form-button">
+        <button type="submit " title="Add Expense" >
+        <i className="material-icons btn">note_add</i>
+        </button>
+      </div>
       <div className="expense-form">
         <div className="expense-form-input">
           <label className="expense-form-label">
@@ -96,11 +101,7 @@ const ExpenseForm = (props) => {
           
         </div>
       </div>
-      <div className="expense-form-button">
-        <button type="submit" className="btn">
-          Add Expense
-        </button>
-      </div>
+      
     </form>
   );
 };

@@ -4,5 +4,6 @@
     margin: 0rem auto;
     padding: 0px 15px;
     max-height: 50rem;
+    z-index: 5 !important;
     
 }

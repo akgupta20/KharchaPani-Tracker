@@ -1,13 +1,16 @@
 .filter-expenses{
-    width: 50rem;
-    max-width: 95%;
-    margin: 2rem auto;
-    padding: 25px 15px;
-    background-color: rgba(133, 58, 204, 0.745);
+   
+   
+    padding: 2px 1px;
+    /* background-color: rgba(133, 58, 204, 0.745); */
+    height: 2px;
+    margin-bottom: 34px !important;
+   
     
 }
 
 .filter-field{
   width: 100%;
+ 
   
 }

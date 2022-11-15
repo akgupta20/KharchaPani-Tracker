@@ -1,18 +1,21 @@
 .item-light-theme{
-    --bgcolvar: rgb(57, 45, 90);
+    --bgcolvar: black;
+    --bgbackvar:white;
 }
 .item-dark-theme{
-   --bgcolvar: rgba(37, 68, 210, 0.21);
+   --bgcolvar: white;
+   --bgbackvar:black;
 }
 
 .expense-item{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 2px rgb(19, 105, 30);
-    background-color: var(--bgcolvar);
+    background-color: var(--bgbackvar);
     margin: 15px 5px;
-    border: 0.1px solid rgb(124, 3, 143);
+    border: 0.1px solid ;
 }
 
 .expense-item__discription{
@@ -25,21 +28,21 @@
     margin: 0px 20px;
     font-size: 14px;
     flex: 1;
-    color: rgb(239, 238, 245);
+    color: var(--bgcolvar);
     
 }
 .expense-item__price{
-    color: white;
+    color: var(--bgcolvar);
     padding: 0.5rem;
-    border: 2px solid white;
-    background-color: rgb(35, 35, 91);
+    border: 2px solid var(--bgcolvar);
+    background-color: var(--bgbackvar);
     font-size: 16px;
     padding: 3px 18px;
     font-weight: bold;
     margin-right: 10px;
 }
 .deletebtn{
-    background-color: var(--bgcolvar);
+    background-color: var(--bgbackvar);
     color: red;
     font-size: 22px;
     font-weight: bold;

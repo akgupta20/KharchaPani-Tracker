@@ -6,8 +6,8 @@
     
 }
 .ex-light-theme{
-    background-color: rgb(27, 27, 47);
+    background-color: rgba(32, 32, 49, 0.363);
 }
 .ex-dark-theme{
-   background-color:  rgba(0, 0, 0,0.6);
+   background-color:  rgba(0, 0, 0, 0.288);
 }

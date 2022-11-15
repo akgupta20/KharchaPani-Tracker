@@ -1,9 +1,11 @@
 .new-expense{
-    
-    background-color: rgba(9, 9, 63, 0.656);
+   
+    background-color: var(--bgcolvar) ;
     width: 50rem;
     max-width: 95%;
     margin: 1rem auto;
     margin-bottom: 0;
     padding: 25px 15px;
+   
+
 }

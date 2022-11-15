@@ -3,18 +3,29 @@ import { useState } from "react";
 
 const Theme = (props) => {
 
-    const [themeClaases,setThemeClasses] = useState('btn theme-btn-light');
+    const [themeClaases,setThemeClasses] = useState(' theme-btn-light ');
     const ThemeClickHandler = () => {
-        if (themeClaases === 'btn theme-btn-light')
-            setThemeClasses('btn theme-btn-dark')
-        else setThemeClasses('btn theme-btn-light');
-        props.FromApp();
+        if (themeClaases === 'theme-btn-light ')
+            setThemeClasses('theme-btn-dark ')
+        else setThemeClasses('  theme-btn-light ');
+        props.FromHeader();
        
-}
+    }
+    
+    const themeChangeBtnClasses =  { themeClaases }+" form-check-input " ;
 
     return (
-        <div className="themeContainer">
-            <button title="Change theme"className={themeClaases} onClick={ThemeClickHandler}></button>
-        </div>);
+      
+       
+           
+            
+            <div className="form-check form-switch themeContainer" >
+            <input title="Change theme" className={themeChangeBtnClasses}   type="checkbox" id="flexSwitchCheckDefault" onClick={ThemeClickHandler}/>
+             
+            </div>
+
+      
+    );
+    
 }
 export default Theme;
