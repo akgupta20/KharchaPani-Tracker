@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/KharchaPani-Tracker/static/css/main.a6975832.css",
-    "main.js": "/KharchaPani-Tracker/static/js/main.6fe77f19.js",
+    "main.css": "/KharchaPani-Tracker/static/css/main.3cbd1b2f.css",
+    "main.js": "/KharchaPani-Tracker/static/js/main.e4c4cef7.js",
     "static/media/no_result.gif": "/KharchaPani-Tracker/static/media/no_result.825635cf27aaa696a35b.gif",
     "index.html": "/KharchaPani-Tracker/index.html",
-    "main.a6975832.css.map": "/KharchaPani-Tracker/static/css/main.a6975832.css.map",
-    "main.6fe77f19.js.map": "/KharchaPani-Tracker/static/js/main.6fe77f19.js.map"
+    "main.3cbd1b2f.css.map": "/KharchaPani-Tracker/static/css/main.3cbd1b2f.css.map",
+    "main.e4c4cef7.js.map": "/KharchaPani-Tracker/static/js/main.e4c4cef7.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6975832.css",
-    "static/js/main.6fe77f19.js"
+    "static/css/main.3cbd1b2f.css",
+    "static/js/main.e4c4cef7.js"
   ]
 }
